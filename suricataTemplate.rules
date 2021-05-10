@@ -1,6 +1,6 @@
 #Template
 
-<action> <protocol> <source> <source port> <direction> <destination> <destination port> (msg: <message>; sid:<signature id>; rev:<revision>;)
+<action> <protocol> <source> <source port> <direction> <destination> <destination port> (msg:<message>; sid:<signature id>; rev:<revision>;)
 
 #Example from https://suricata.readthedocs.io/en/suricata-6.0.0/rules/intro.html
 
