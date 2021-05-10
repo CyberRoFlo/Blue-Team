@@ -1,0 +1,7 @@
+#Template
+
+<action> <protocol> <source> <source port> <direction> <destination> <destination port> (msg: <message>; sid:<signature id>; rev:<revision>;)
+
+#Example from https://suricata.readthedocs.io/en/suricata-6.0.0/rules/intro.html
+
+ drop tcp $HOME_NET any -> $EXTERNAL_NET any (msg:”ET TROJAN Likely Bot Nick in IRC (USA +..)”; flow:established,to_server; flowbits:isset,is_proto_irc; content:”NICK “; pcre:”/NICK .*USA.*[0-9]{3,}/i”; reference:url,doc.emergingthreats.net/2008124; classtype:trojan-activity; sid:2008124; rev:2;)
